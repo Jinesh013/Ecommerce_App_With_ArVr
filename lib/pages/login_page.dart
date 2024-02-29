@@ -25,15 +25,25 @@ class _LoginPageState extends State<LoginPage> {
             Container(
               width: double.maxFinite,
               padding:
-                  const EdgeInsets.symmetric(horizontal: 10, vertical: 100),
+                   const EdgeInsets.only(top: 150.0),
               child: Text(
                 "Welcome",
                 style: AppWidget.boldTextField(),
                 textAlign: TextAlign.center,
               ),
             ),
+            Container(
+              width: double.maxFinite,
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+              child: Text(
+                "Please enter your data to continue",
+                style: AppWidget.lightTextField(),
+                textAlign: TextAlign.center,
+              ),
+            ),
             const SizedBox(
-              height: 20.0,
+              height: 100.0,
             ),
             Padding(
               padding:
