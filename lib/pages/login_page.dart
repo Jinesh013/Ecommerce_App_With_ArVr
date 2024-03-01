@@ -79,35 +79,35 @@ class _LoginPageState extends State<LoginPage> {
                     ),
           
                     //Password
-                    Container(
-                      margin: const EdgeInsets.all(8),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.deepPurple.withOpacity(.3)),
-                      child: TextFormField(
-                        obscureText: !isVisible,
-                        decoration: InputDecoration(
-                            icon: const Icon(Icons.lock),
-                            border: InputBorder.none,
-                            hintText: "Password",
-                            suffixIcon: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isVisible = !isVisible;
-                                });
-                              },
-                              child: Icon(
-                                isVisible
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                              ),
-                            )),
-                      ),
-                    ),
+                    // Container(
+                    //   margin: const EdgeInsets.all(8),
+                    //   padding:
+                    //       const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(8),
+                    //       color: Colors.deepPurple.withOpacity(.3)),
+                    //   child: TextFormField(
+                    //     obscureText: !isVisible,
+                    //     decoration: InputDecoration(
+                    //         icon: const Icon(Icons.lock),
+                    //         border: InputBorder.none,
+                    //         hintText: "Password",
+                    //         suffixIcon: GestureDetector(
+                    //           onTap: () {
+                    //             setState(() {
+                    //               isVisible = !isVisible;
+                    //             });
+                    //           },
+                    //           child: Icon(
+                    //             isVisible
+                    //                 ? Icons.visibility
+                    //                 : Icons.visibility_off,
+                    //           ),
+                    //         )),
+                    //   ),
+                    // ),
           
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 10),
           
                     Container(
                       margin: const EdgeInsets.all(8),
