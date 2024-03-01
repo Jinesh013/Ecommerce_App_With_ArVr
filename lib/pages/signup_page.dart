@@ -10,8 +10,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -22,8 +20,7 @@ class _SignUpState extends State<SignUp> {
             children: [
               Container(
                 width: double.maxFinite,
-                padding:
-                     const EdgeInsets.only(top: 100.0),
+                padding: const EdgeInsets.only(top: 100.0),
                 child: Text(
                   "Sign Up",
                   style: AppWidget.boldTextField(),
@@ -34,15 +31,15 @@ class _SignUpState extends State<SignUp> {
                 height: 100.0,
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 16.0, horizontal: 32.0),
                 child: Column(
                   children: [
                     //Username
                     Container(
                       margin: const EdgeInsets.all(8),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
@@ -54,41 +51,29 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     ),
-          
+
                     //Password
                     Container(
                       margin: const EdgeInsets.all(8),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
                       child: TextFormField(
                         // obscureText: !isVisible,
                         decoration: const InputDecoration(
-                            icon: Icon(Icons.lock),
-                            border: InputBorder.none,
-                            hintText: "Password",
-                            // suffixIcon: GestureDetector(
-                            //   onTap: () {
-                            //     setState(() {
-                            //       isVisible = !isVisible;
-                            //     });
-                            //   },
-                            //   child: Icon(
-                            //     isVisible
-                            //         ? Icons.visibility
-                            //         : Icons.visibility_off,
-                            //   ),
-                            // )
-                            ),
+                          icon: Icon(Icons.lock),
+                          border: InputBorder.none,
+                          hintText: "Password",
+                        ),
                       ),
                     ),
 
                     Container(
                       margin: const EdgeInsets.all(8),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
@@ -100,9 +85,9 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     ),
-          
+
                     const SizedBox(height: 10),
-          
+
                     Container(
                       margin: const EdgeInsets.all(8),
                       height: 60,
@@ -111,17 +96,13 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.circular(8),
                           color: const Color.fromARGB(255, 134, 92, 208)),
                       child: TextButton(
-                          onPressed: () {
-                            // if (formKey.currentState!.validate()){
-                            //    //log in method
-                            // }
-                          },
+                          onPressed: () {},
                           child: const Text(
                             "Sign Up",
-                            style: TextStyle(color: Colors.white,fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           )),
                     ),
-          
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -134,7 +115,10 @@ class _SignUpState extends State<SignUp> {
                                   MaterialPageRoute(
                                       builder: (context) => const LoginPage()));
                             },
-                            child: const Text("Signin",style: TextStyle(fontSize: 17),))
+                            child: const Text(
+                              "Signin",
+                              style: TextStyle(fontSize: 17),
+                            ))
                       ],
                     ),
                   ],
