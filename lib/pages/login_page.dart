@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
     // final username = TextEditingController();
     // final password = TextEditingController();
 
-    bool isVisible = false;
+    // bool isVisible = false;
 
     // final formKey = GlobalKey<FormState>();
 
@@ -64,12 +64,6 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
                       child: TextFormField(
-                          validator:(value){
-                            if (value!.isEmpty){
-                              return "Please Enter your Username";
-                            }
-                            return null;
-                          },
                         decoration: const InputDecoration(
                           icon: Icon(Icons.person),
                           border: InputBorder.none,
@@ -87,23 +81,24 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
                       child: TextFormField(
-                        obscureText: !isVisible,
-                        decoration: InputDecoration(
-                            icon: const Icon(Icons.lock),
+
+                        // obscureText: !isVisible,
+                        decoration: const InputDecoration(
+                            icon: Icon(Icons.lock),
                             border: InputBorder.none,
                             hintText: "Password",
-                            suffixIcon: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  isVisible = !isVisible;
-                                });
-                              },
-                              child: Icon(
-                                isVisible
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                              ),
-                            )
+                            // suffixIcon: GestureDetector(
+                            //   onTap: () {
+                            //     setState(() {
+                            //       isVisible = !isVisible;
+                            //     });
+                            //   },
+                            //   child: Icon(
+                            //     isVisible
+                            //         ? Icons.visibility
+                            //         : Icons.visibility_off,
+                            //   ),
+                            // )
                             ),
                       ),
                     ),
@@ -118,10 +113,14 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(8),
                           color: const Color.fromARGB(255, 134, 92, 208)),
                       child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            // if (formKey.currentState!.validate()){
+                            //    //log in method
+                            // }
+                          },
                           child: const Text(
-                            "LOGIN",
-                            style: TextStyle(color: Colors.white),
+                            "Login",
+                            style: TextStyle(color: Colors.white,fontSize: 18),
                           )),
                     ),
           
@@ -137,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                                   MaterialPageRoute(
                                       builder: (context) => const SignUp()));
                             },
-                            child: const Text("SIGN UP"))
+                            child: const Text("Sign Up",style: TextStyle(fontSize: 17),))
                       ],
                     ),
                   ],
