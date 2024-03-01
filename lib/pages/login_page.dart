@@ -18,19 +18,19 @@ class _LoginPageState extends State<LoginPage> {
 
     bool isVisible = false;
 
-    final formKey = GlobalKey<FormState>();
+    // final formKey = GlobalKey<FormState>();
 
     return Material(
       color: Colors.white,
       child: SingleChildScrollView(
         child: Form(
-          key: formKey,
+          // key: formKey,
           child: Column(
             children: [
               Container(
                 width: double.maxFinite,
                 padding:
-                     const EdgeInsets.only(top: 150.0),
+                     const EdgeInsets.only(top: 100.0),
                 child: Text(
                   "Welcome",
                   style: AppWidget.boldTextField(),
@@ -79,33 +79,34 @@ class _LoginPageState extends State<LoginPage> {
                     ),
           
                     //Password
-                    // Container(
-                    //   margin: const EdgeInsets.all(8),
-                    //   padding:
-                    //       const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                    //   decoration: BoxDecoration(
-                    //       borderRadius: BorderRadius.circular(8),
-                    //       color: Colors.deepPurple.withOpacity(.3)),
-                    //   child: TextFormField(
-                    //     obscureText: !isVisible,
-                    //     decoration: InputDecoration(
-                    //         icon: const Icon(Icons.lock),
-                    //         border: InputBorder.none,
-                    //         hintText: "Password",
-                    //         suffixIcon: GestureDetector(
-                    //           onTap: () {
-                    //             setState(() {
-                    //               isVisible = !isVisible;
-                    //             });
-                    //           },
-                    //           child: Icon(
-                    //             isVisible
-                    //                 ? Icons.visibility
-                    //                 : Icons.visibility_off,
-                    //           ),
-                    //         )),
-                    //   ),
-                    // ),
+                    Container(
+                      margin: const EdgeInsets.all(8),
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.deepPurple.withOpacity(.3)),
+                      child: TextFormField(
+                        obscureText: !isVisible,
+                        decoration: InputDecoration(
+                            icon: const Icon(Icons.lock),
+                            border: InputBorder.none,
+                            hintText: "Password",
+                            suffixIcon: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  isVisible = !isVisible;
+                                });
+                              },
+                              child: Icon(
+                                isVisible
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                              ),
+                            )
+                            ),
+                      ),
+                    ),
           
                     const SizedBox(height: 10),
           
