@@ -149,18 +149,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-
-
-// TextFormField(
-//   decoration: const InputDecoration(
-//       hintText: "Enter username", labelText: "Username"),
-// ),
-// TextFormField(
-//   obscureText: true,
-//   decoration: const InputDecoration(
-//       hintText: "Enter password", labelText: "Password"),
-// ),
-// const SizedBox(
-//   height: 100.0,
-// ),

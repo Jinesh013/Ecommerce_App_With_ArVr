@@ -11,7 +11,6 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
 
-  // bool isVisible = false; 
 
   @override
   Widget build(BuildContext context) {
