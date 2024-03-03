@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     final formKey = GlobalKey<FormState>();
 
     moveToHome(BuildContext context) async {
+      // autofocus:true;
       if (formKey.currentState!.validate()) {
         await Navigator.push(
             context, MaterialPageRoute(builder: (context) => const HomePage()));
@@ -28,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
       color: Colors.white,
       child: SingleChildScrollView(
         child: Form(
+          
           key: formKey,
           child: Column(
             children: [
@@ -67,6 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
                       child: TextFormField(
+                        autofocus:true,
                         decoration: const InputDecoration(
                           icon: Icon(Icons.person),
                           border: InputBorder.none,
@@ -90,6 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.deepPurple.withOpacity(.3)),
                       child: TextFormField(
+                        autofocus:true,
                         // obscureText: !isVisible,
                         decoration: const InputDecoration(
                           icon: Icon(Icons.lock),
